@@ -2,22 +2,18 @@
   display: flex;
   flex-wrap: wrap;
 }
-
-.product-card {
+.productCard {
   padding: 2%;
   flex-grow: 1;
   flex-basis: 16%;
 }
-
 body {
   background-color: #f6f6f6;
 }
-
 .cont {
   display: flex;
   justify-content: center;
 }
-
 .back {
   background-color: #f4eddd;
   padding: 20px;
@@ -25,7 +21,6 @@ body {
   margin-right: 20px;
   font-family: "Encode Sans Semi Expanded", sans-serif;
 }
-
 .change {
   background-color: black;
   color: white;
@@ -33,12 +28,10 @@ body {
   border: none;
   font-family: "Encode Sans Semi Expanded", sans-serif;
 }
-
 h3,
 h4 {
   font-family: "Encode Sans Semi Expanded", sans-serif;
 }
-
 button {
   margin: 10px;
 }
