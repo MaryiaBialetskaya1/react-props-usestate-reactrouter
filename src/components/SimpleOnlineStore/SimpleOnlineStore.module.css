@@ -10,22 +10,11 @@
 body {
   background-color: #f6f6f6;
 }
-.cont {
-  display: flex;
-  justify-content: center;
-}
 .back {
   background-color: #f4eddd;
   padding: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  font-family: "Encode Sans Semi Expanded", sans-serif;
-}
-.change {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  border: none;
   font-family: "Encode Sans Semi Expanded", sans-serif;
 }
 h3,

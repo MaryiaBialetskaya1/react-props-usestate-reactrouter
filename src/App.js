@@ -7,6 +7,7 @@ import { Birds } from "./components/Birds";
 import { Dogs } from "./components/Dogs";
 import { SimpleOnlineStore } from "./components/SimpleOnlineStore/SimpleOnlineStore";
 import { storeData } from "./data";
+import { Buttons } from "./components/Buttons/Buttons";
 
 function App() {
   // const [people, setPeople] = useState(data);
@@ -16,6 +17,7 @@ function App() {
   const [store, setStore] = useState(storeData);
   return (
     <div>
+      <Buttons />
       <SimpleOnlineStore onlineStore={store} />
       {/* <People propName={people} />
       <Birds birds={birds} />

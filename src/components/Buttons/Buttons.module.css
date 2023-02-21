@@ -1,0 +1,11 @@
+.cont {
+  display: flex;
+  justify-content: center;
+}
+.change {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+}
