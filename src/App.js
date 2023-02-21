@@ -8,6 +8,7 @@ import { Dogs } from "./components/Dogs";
 import { SimpleOnlineStore } from "./components/SimpleOnlineStore/SimpleOnlineStore";
 import { storeData } from "./data";
 import { Buttons } from "./components/Buttons/Buttons";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   // const [people, setPeople] = useState(data);
