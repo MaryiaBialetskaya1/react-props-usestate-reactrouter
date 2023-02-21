@@ -15,9 +15,16 @@ function App() {
   // const [dogs, setDogs] = useState(dataDogs);
 
   const [store, setStore] = useState(storeData);
+
+  const filteredCloth = (searchTerm) => {
+    const newFilterCloth = storeData.filter(
+      (element) => element.searchTerm === searchTerm
+    );
+    setStore(newFilterCloth);
+  };
   return (
     <div>
-      <Buttons />
+      <Buttons filteredCloth={filteredCloth} />
       <SimpleOnlineStore onlineStore={store} />
       {/* <People propName={people} />
       <Birds birds={birds} />
