@@ -9,14 +9,12 @@ import { SimpleOnlineStore } from "./components/SimpleOnlineStore/SimpleOnlineSt
 import { storeData } from "./data";
 import { Buttons } from "./components/Buttons/Buttons";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Navbar } from "./components/Havbar/Navbar";
 
 function App() {
-  <Router>
-    <Link to="/dogs">Dogs</Link>
-  </Router>;
-  // const [people, setPeople] = useState(data);
-  // const [birds, setBirds] = useState(dataBirds);
-  // const [dogs, setDogs] = useState(dataDogs);
+  const [people, setPeople] = useState(data);
+  const [birds, setBirds] = useState(dataBirds);
+  const [dogs, setDogs] = useState(dataDogs);
 
   const [store, setStore] = useState(storeData);
 
@@ -27,13 +25,25 @@ function App() {
     setStore(newFilterCloth);
   };
   return (
-    <div>
-      <Buttons filteredCloth={filteredCloth} />
-      <SimpleOnlineStore onlineStore={store} />
-      {/* <People propName={people} />
+    <Router>
+      <div>
+        <Navbar />
+        <Buttons filteredCloth={filteredCloth} />
+        {/* <SimpleOnlineStore onlineStore={store} /> */}
+        <Routes>
+          <Route path="/dogs" element={<Dogs dogs={dogs} />} />
+          <Route path="/birds" element={<Birds birds={birds} />} />
+          <Route path="/people" element={<People propName={people} />} />
+          <Route
+            path="/store"
+            element={<SimpleOnlineStore onlineStore={store} />}
+          />
+        </Routes>
+        {/* <People propName={people} />
       <Birds birds={birds} />
       <Dogs dogs={dogs} /> */}
-    </div>
+      </div>
+    </Router>
   );
 }
 
