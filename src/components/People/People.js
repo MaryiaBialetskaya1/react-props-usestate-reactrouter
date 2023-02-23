@@ -1,7 +1,12 @@
-export function People({ propName }) {
+import { useState } from "react";
+import { dataPeople } from "../../data";
+
+export function People() {
+  const [people] = useState(dataPeople);
+
   return (
     <div className="App">
-      {propName.map((item) => {
+      {people.map((item) => {
         const { id, name } = item;
         return (
           <div key={id}>

@@ -1,4 +1,8 @@
-export function Dogs({ dogs }) {
+import { useState } from "react";
+import { dataDogs } from "../../data";
+
+export function Dogs() {
+  const [dogs] = useState(dataDogs);
   return (
     <div>
       <h1>DOGS</h1>

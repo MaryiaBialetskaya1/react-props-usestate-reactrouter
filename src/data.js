@@ -123,7 +123,7 @@ export const storeData = [
   },
 ];
 
-export const data = [
+export const dataPeople = [
   {
     id: 1,
     name: "Lily",
