@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #2b3467;
+  padding: 15px;
+}
+.link {
+  padding: 10px 40px;
+  text-decoration: none;
+  color: azure;
+  text-transform: uppercase;
+}
