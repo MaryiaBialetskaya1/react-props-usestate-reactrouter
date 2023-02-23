@@ -15,7 +15,6 @@ function App() {
   const [people] = useState(data);
   const [birds] = useState(dataBirds);
   const [dogs] = useState(dataDogs);
-
   const [store, setStore] = useState(storeData);
 
   const filteredCloth = (searchTerm) => {
@@ -28,7 +27,7 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        <Buttons filteredCloth={filteredCloth} />
+        {/* <Buttons filteredCloth={filteredCloth} /> */}
         {/* <SimpleOnlineStore onlineStore={store} /> */}
         <Routes>
           <Route path="/dogs" element={<Dogs dogs={dogs} />} />
@@ -36,7 +35,12 @@ function App() {
           <Route path="/people" element={<People propName={people} />} />
           <Route
             path="/store"
-            element={<SimpleOnlineStore onlineStore={store} />}
+            element={
+              <SimpleOnlineStore
+                onlineStore={store}
+                filteredCloth={filteredCloth}
+              />
+            }
           />
         </Routes>
         {/* <People propName={people} />
