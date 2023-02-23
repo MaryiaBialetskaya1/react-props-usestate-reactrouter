@@ -1,10 +1,8 @@
 import style from "./SimpleOnlineStore.module.css";
-import { Buttons } from "../Buttons/Buttons";
 
-export function SimpleOnlineStore({ onlineStore, filteredCloth }) {
+export function SimpleOnlineStore({ onlineStore }) {
   return (
     <div>
-      <Buttons filteredCloth={filteredCloth} />
       <div className={style.products}>
         {onlineStore.map((element) => {
           const { id, name, price, image } = element;

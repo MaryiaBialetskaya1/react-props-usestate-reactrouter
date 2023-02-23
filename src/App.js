@@ -9,19 +9,13 @@ import { SimpleOnlineStore } from "./components/SimpleOnlineStore/SimpleOnlineSt
 import { storeData } from "./data";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Havbar/Navbar";
+import { Home } from "./components/Home/Home";
 
 function App() {
   const [people] = useState(data);
   const [birds] = useState(dataBirds);
   const [dogs] = useState(dataDogs);
-  const [store, setStore] = useState(storeData);
 
-  const filteredCloth = (searchTerm) => {
-    const newFilterCloth = storeData.filter(
-      (element) => element.searchTerm === searchTerm
-    );
-    setStore(newFilterCloth);
-  };
   return (
     <Router>
       <div>
@@ -30,15 +24,7 @@ function App() {
           <Route path="/dogs" element={<Dogs dogs={dogs} />} />
           <Route path="/birds" element={<Birds birds={birds} />} />
           <Route path="/people" element={<People propName={people} />} />
-          <Route
-            path="/"
-            element={
-              <SimpleOnlineStore
-                onlineStore={store}
-                filteredCloth={filteredCloth}
-              />
-            }
-          />
+          <Route path="/" element={<Home />} />
         </Routes>
       </div>
     </Router>
