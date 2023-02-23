@@ -4,7 +4,7 @@ export function SimpleOnlineStore({ onlineStore }) {
   return (
     <div className={style.products}>
       {onlineStore.map((element) => {
-        const { id, name, searchTerm, price, image } = element;
+        const { id, name, price, image } = element;
         return (
           <div key={id} className={style.productCard}>
             <img src={image} alt="store items" width="400px" height="500px" />
